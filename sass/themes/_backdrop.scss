@@ -1,0 +1,40 @@
+.background {
+
+    &__svg-backdrop {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -2;
+
+        &-st0 {
+            fill: none;
+        }
+
+        &-st1 {
+            fill: #BFBFBF;
+        }
+
+        &-st2 {
+            fill: #898989;
+        }
+
+        &-st3 {
+            fill: #454545;
+        }
+
+        &-st4 {
+            fill: #343434;
+        }
+
+        &-st5 {
+            fill: #202020;
+        }
+
+        &-st6 {
+            fill: #151515;
+        }
+    }
+} 
+
+
