@@ -1,0 +1,9 @@
+.container {
+    &__projects {
+
+        &__content-wrapper {
+            background-color: rgba(var(--summer-light-rgb), .2);
+        }
+    }
+}
+    

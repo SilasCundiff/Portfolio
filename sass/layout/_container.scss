@@ -4,77 +4,36 @@
         display: flex;
         align-items: center;
     }
-
     div[class$="__content-wrapper"] {
         height: 93%;
         width: 100%;
         margin: 4rem 1.5rem 1rem;
         padding: 2rem;
         border-radius: 10px;
-        
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        position: relative;
     }
 
-    &__home {
-        &__content-wrapper {
-            background-color: rgba(var(--spring-primary-rgb), .5);
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-start;
+ 
 
-            .intro {
-                margin-top: 10rem;
-                height: 50%;
-                width: 50%;
-                font-size: 6rem;
-                font-family: ode;
-                font-weight: 400;
-                text-align: center;
-                line-height: .9;
-                display: flex; flex-direction: column;
-
-                &__main {
-                    margin-bottom: 4rem;
-                }
-
-                &__main-focus {
-                    font-size: 9rem;
-                    font-weight: 700;
-                }
-
-                &__sub {
-                    font-size: 5rem;
-                    line-height: 1.2;
-                }
-
-                
-                    
-                
-            }
+    .left-arrow, .right-arrow {
+        font-size: 3.5rem;
+        line-height: 0;
+        position: absolute;
+        bottom: 2rem;
+        &__link {
+            @include link-unset;
+            color: rgba(var(--near-white-rgb), .8);
         }
-
     }
 
-    &__projects {
-
-        &__content-wrapper {
-            background-color: rgba(var(--summer-dark-rgb), .5);
-        }
-
+    .left-arrow {
+       left: 1.5rem;
+    }
+    .right-arrow {
+        right: 1.5rem;
     }
 
-    &__about {
-
-        &__content-wrapper {
-            background-color: rgba(var(--fall-dark-rgb), .5);
-        }
-
-    }
-
-    &__contact {
-
-        &__content-wrapper {
-            background-color: rgba(var(--winter-dark-rgb), .5);
-        }
-
-    }
 }

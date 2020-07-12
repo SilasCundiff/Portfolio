@@ -1,4 +1,11 @@
-
 .btn {
-    @include link-style;
+    display: inline-block;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    font-size: 4rem;
+    font-family: var(--font-2);
+    @include link-unset;
+    color: rgba(var(--near-white-rgb), 1);
+    background-color:  rgba(var(--dark-rgb), .8);
 }

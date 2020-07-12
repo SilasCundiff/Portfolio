@@ -1,5 +1,11 @@
+// Helpers - Tools, Utils, Variables, Mixins
+@import "helpers/animations";
+@import "helpers/functions";
+@import "helpers/variables";
+@import "helpers/mixin";
 
 // Base - for styles every page will use
+
 @import "base/base";
 @import "base/typography";
 
@@ -13,16 +19,14 @@
 @import "layout/horizontal_hack";
 
 // Pages - page specific styles
+@import "pages/home";
+@import "pages/contact";
+@import "pages/about";
+@import "pages/projects";
 
 // Themes - section specific themes
 @import "themes/shield";
 @import "themes/backdrop";
 
-
-// Helpers - Tools, Utils, Variables, Mixins
-@import "helpers/animations";
-@import "helpers/functions";
-@import "helpers/mixins";
-@import "helpers/variables";
 // Vendors - Third party css
 

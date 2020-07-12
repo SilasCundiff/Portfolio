@@ -1,0 +1,8 @@
+.container {
+    &__contact {
+
+        &__content-wrapper {
+            background-color: rgba(var(--winter-light-rgb), .2);
+        }
+    }
+}

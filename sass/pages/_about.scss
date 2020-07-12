@@ -1,0 +1,9 @@
+.container {
+    &__about {
+
+        &__content-wrapper {
+            background-color: rgba(var(--fall-light-rgb), .2);
+        }
+
+    }
+}

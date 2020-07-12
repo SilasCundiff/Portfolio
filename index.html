@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/adab6aa253.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://use.typekit.net/nhl2vbl.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="public/css/style.css">
         <title>Silas Cundiff</title>
     </head>
 
@@ -14,10 +14,10 @@
 
         <nav class="navigation">
             <ul class="navigation__list">
-                <li class="navigation__list--item"><a href="#home" class="navigation__link">home</a></li>
-                <li class="navigation__list--item"><a href="#projects" class="navigation__link">projects</a></li>
-                <li class="navigation__list--item"><a href="#about" class="navigation__link">about</a></li>
-                <li class="navigation__list--item"><a href="#contact" class="navigation__link">contact</a></li>
+                <li class="navigation__list--item"><a href="#home" class="navigation__link navigation__link--home">home</a></li>
+                <li class="navigation__list--item"><a href="#projects" class="navigation__link navigation__link--projects">projects</a></li>
+                <li class="navigation__list--item"><a href="#about" class="navigation__link navigation__link--about">about</a></li>
+                <li class="navigation__list--item"><a href="#contact" class="navigation__link navigation__link--contact">contact</a></li>
             </ul>
         </nav>
         <div class="background">
@@ -49,16 +49,22 @@
             <svg class="background__svg-tree" version="1.1" id="All" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000"
                 style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
-                <style type="text/css">
+				<style type="text/css">
+					#Inner-trim {
+						display: none;
+					}
                     .st0 {
-                        clip-path: url(#XMLID_2_);
+						clip-path: url(#XMLID_2_);
+						display: none;
                     }
 
                     .st1 {
-                        fill: #FFFFFF;
+						fill: #FFFFFF;
+						display: none;
                     }
 
                     .st2 {
+						display: none;
                         fill: #AAC0DF;
                         stroke: #000000;
                         stroke-width: 10;
@@ -66,6 +72,7 @@
                     }
 
                     .st3 {
+						display: none;
                         fill: #F0A55A;
                         stroke: #000000;
                         stroke-width: 10;
@@ -73,6 +80,7 @@
                     }
 
                     .st4 {
+						display: none;
                         fill: #6AC195;
                         stroke: #000000;
                         stroke-width: 10;
@@ -80,6 +88,7 @@
                     }
 
                     .st5 {
+						display: none;
                         fill: #FFABBC;
                         stroke: #000000;
                         stroke-width: 10;
@@ -87,13 +96,14 @@
                     }
 
                     .st6 {
+						display: none;
                         stroke: #000000;
                         stroke-width: 3;
                         stroke-miterlimit: 10;
                     }
 
                     .st7 {
-                        stroke: #FFFFFF;
+                        <!-- stroke: #FFFFFF; -->
                         stroke-miterlimit: 10;
                     }
                 </style>
@@ -1217,34 +1227,30 @@
                             </div>
 							<div class="intro__sub">This is my place to grow and show what makes me stand out against the forest of developers</div>
 							<div class="intro__cta-wrapper">
-								<a href="#projects" class="btn cta-btn">View Projects</a>
+								<a href="#projects" class="btn cta-btn">Projects</a>
 								<a href="#contact" class="btn cta-btn">Hire Me</a>
 							</div>
-                        </div>
-
-
-
-                        <!-- <span class="intro__top">My name is &nbsp;</span>
-                        <span class="intro__main">Silas &nbsp;</span>
-                        <span class="intro__sub">and I'm a Web Developer and Designer</span> -->
+						</div>
+						<div class="right-arrow"><a href="#projects" class="right-arrow__link right-arrow__link--home">&rarr;</a></div>
                     </div>
                 </section>
                 <section class="container__projects" id="projects">
                     <div class="container__projects__content-wrapper">
-                        <h1>page 2</h1>
-                        <h1>Silas Cundiff</h1>
+						<div class="left-arrow"><a href="#home" class="left-arrow__link left-arrow__link--projects">&larr;</a></div>
+						<div class="right-arrow"><a href="#about" class="right-arrow__link right-arrow__link--projects">&rarr;</a></div>
+                        
                     </div>
                 </section>
                 <section class="container__about" id="about">
                     <div class="container__about__content-wrapper">
-                        <h1>page 3</h1>
-                        <h1>Silas Cundiff</h1>
+						<div class="left-arrow"><a href="#projects" class="left-arrow__link left-arrow__link--about">&larr;</a></div>
+						<div class="right-arrow"><a href="#contact" class="right-arrow__link right-arrow__link--about">&rarr;</a></div>
                     </div>
                 </section>
                 <section class="container__contact" id="contact">
                     <div class="container__contact__content-wrapper">
-                        <h1>page 4</h1>
-                        <h1>Silas Cundiff</h1>
+						<div class="left-arrow"><a href="#about" class="left-arrow__link left-arrow__link--contact">&larr;</a></div>
+                        
                     </div>
                 </section>
             </div>
