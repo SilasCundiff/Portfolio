@@ -1,5 +1,5 @@
 
-// function that converts a hex color to a it's rgb value. 
+//function that converts a hex color to a it's rgb value. 
 //Used to create RGBA colors without needing to declare a new variable for each alpha
 //Credit to Ali Obaji at https://medium.com/techhive-io/how-to-use-css-variables-with-sass-mixins-671e1f6067b3 for the solution
 @function hexToRGB ($hex) {

@@ -4,7 +4,10 @@
 but I also wanted them to be in a single folder for easy changes. 
 I needed the ability to use them in a rgba format and I wanted the ability to manipulate them using JS.
 This solution also provides a bit of future proofing. I can easily change, expand, and manipulate the color pallet
-all from a single folder. It required a bit of sass and css trickery to accomplish. */
+all from a single folder. It required a bit of sass and css trickery to accomplish.
+
+Unused colors will be removed before final deployment.
+*/
 
 // Sass variable declarations. Change these to update all colors of the same name.
 /* General */

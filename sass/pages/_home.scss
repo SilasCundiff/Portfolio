@@ -1,6 +1,10 @@
+/* home page specific layouts */
+
 .container {
     &__home {
         &__content-wrapper {
+            justify-content: flex-end;
+            align-items: flex-start;
             background-color: rgba(var(--dark-rgb), .1);
             
             .intro {

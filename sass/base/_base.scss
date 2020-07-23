@@ -1,3 +1,6 @@
+// Base file for things such as clearfix and font-size declaration
+
+
 *, *::before, *::after {
     padding: 0;
     margin: 0;
@@ -5,8 +8,9 @@
 }
 
 html {
+    // Standardize font-size to 10px for better control
     font-size: 62.5%;
-    font-family: var(--font-4);
+    font-family: var(--font-3);
 }
 
 body {

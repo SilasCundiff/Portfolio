@@ -11,7 +11,7 @@
     </head>
 
     <body>
-
+<!-- BEM naming convention for classes -->
         <nav class="navigation">
             <ul class="navigation__list">
                 <li class="navigation__list--item"><a href="#home" class="navigation__link navigation__link--home">home</a></li>
@@ -19,9 +19,10 @@
                 <li class="navigation__list--item"><a href="#about" class="navigation__link navigation__link--about">about</a></li>
                 <li class="navigation__list--item"><a href="#contact" class="navigation__link navigation__link--contact">contact</a></li>
             </ul>
-        </nav>
+		</nav>
+		<!-- TODO needs a lot of polish, needs assets -->
         <div class="background">
-            <!-- <img src="img/original.png" alt="my logo" class="background__logo"> -->
+			<!-- SVGs not final. Waiting for assets to be complete -->
             <svg class="background__svg-backdrop" version="1.1" viewBox="0 0 8000 2000"
                 xmlns="http://www.w3.org/2000/svg">
                 <rect class="background__svg-backdrop-st0" x="0" width="800" height="200" />
@@ -45,7 +46,7 @@
                 </path>
             </svg>
             <?xml version="1.0" encoding="utf-8"?>
-            <!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
             <svg class="background__svg-tree" version="1.1" id="All" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000"
                 style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
@@ -1233,20 +1234,52 @@
 						</div>
 						<div class="right-arrow"><a href="#projects" class="right-arrow__link right-arrow__link--home">&rarr;</a></div>
                     </div>
-                </section>
+				</section>
+				<!-- TODO decide how to implement project display. Courasel, Cards, or otherwise -->
                 <section class="container__projects" id="projects">
                     <div class="container__projects__content-wrapper">
 						<div class="left-arrow"><a href="#home" class="left-arrow__link left-arrow__link--projects">&larr;</a></div>
 						<div class="right-arrow"><a href="#about" class="right-arrow__link right-arrow__link--projects">&rarr;</a></div>
                         
                     </div>
-                </section>
+				</section>
+				<!-- TODO about page -->
                 <section class="container__about" id="about">
                     <div class="container__about__content-wrapper">
+						<div class="about__bio">
+							<p class="about__bio--p">I'm a graduate from Southern Crescent Technical College <br>with a dual-degree in web design &AMP; development and computer programming. <br> I really enjoy working with <strong class="about__bio--em">HTML, CSS with SASS, and JavaScript</strong>, and I strive to make websites and apps better than what I would like to use.
+							</p>
+						</div>
+						<!-- TODO list skills in a more intesting way. Find alternative to bulleted lists -->
+						<div class="about__competencies">
+							<div class="about__competencies--heading">Other skills:</div>
+							<ul class="about__competencies--list">
+								<div class="about__competencies--list-left">
+									<li class="about__competencies--list-item">Git and GitHub</li>
+									<li class="about__competencies--list-item">React</li>
+									<li class="about__competencies--list-item">Python</li>
+									<li class="about__competencies--list-item">PHP</li>
+									<li class="about__competencies--list-item">SQL</li>
+								</div>
+								<div class="about__competencies--list-left">
+									<li class="about__competencies--list-item">Adobe CC including:
+										<ul class="about__competencies--sub-list">
+											<li class="about__competencies--sub-list-item">Illustrator</li>
+											<li class="about__competencies--sub-list-item">Photoshop</li>
+											<li class="about__competencies--sub-list-item">XD</li>
+											<li class="about__competencies--sub-list-item">Dreamweaver</li>
+										</ul>
+									</li>
+								</div>
+							</ul>
+						</div>
+						
+						<div class="about__my-thoughts">When you look at my logo you may wonder, "why a shield and tree?" <br> It was designed with my name in mind. Silas means "of the forest", <br> and Cundiff originates from a family that used a coat of arms.</div>
 						<div class="left-arrow"><a href="#projects" class="left-arrow__link left-arrow__link--about">&larr;</a></div>
 						<div class="right-arrow"><a href="#contact" class="right-arrow__link right-arrow__link--about">&rarr;</a></div>
                     </div>
-                </section>
+				</section>
+				<!-- TODO needs a form and JS to implement functionality -->
                 <section class="container__contact" id="contact">
                     <div class="container__contact__content-wrapper">
 						<div class="left-arrow"><a href="#about" class="left-arrow__link left-arrow__link--contact">&larr;</a></div>
@@ -1254,7 +1287,8 @@
                     </div>
                 </section>
             </div>
-        </main>
+		</main>
+		<!-- TODO -->
         <footer class="footer">
             Footer
         </footer>
