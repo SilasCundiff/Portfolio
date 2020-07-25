@@ -126,18 +126,14 @@ body {
   color: rgba(var(--near-white-rgb), 1);
   background-color: rgba(var(--dark-rgb), 0.8); }
 
-/* When browser is resized, the current scroll position does not stay
-consistent with where the viewport was prior to resize.
-Example: If the user is looking at the about page and resizes the browser, scrollsnap stops working
-and the use is able to see half of the page */
 .container > * {
   display: flex;
   align-items: center; }
 
 .container div[class$="__content-wrapper"] {
-  min-height: 93%;
+  height: 93%;
   min-width: 100%;
-  margin: 4rem 1.5rem 1rem;
+  margin: 4rem 0 1rem;
   padding: 2rem;
   border-radius: 10px;
   display: flex;
@@ -177,9 +173,8 @@ and the use is able to see half of the page */
   scroll-behavior: smooth; }
 
 .scroll-wrapper__inner {
-  display: flex;
-  flex-direction: row;
-  width: 400vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1920px);
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left; }
   .scroll-wrapper__inner > * {
