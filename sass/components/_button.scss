@@ -12,4 +12,10 @@
     @include link-unset;
     color: rgba(var(--near-white-rgb), 1);
     background-color:  rgba(var(--dark-rgb), .8);
+
+    &--small {
+        font-size: 1.8rem;
+        margin: .5rem;
+        padding: 1.2rem;
+    }
 }
