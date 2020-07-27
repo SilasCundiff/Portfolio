@@ -10,10 +10,13 @@
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 }
+.scroll-wrapper__outter::-webkit-scrollbar {
+    display: none;
+}
+
 .scroll-wrapper__inner {
-    display: flex;
-    flex-direction: row;
-    width: 400vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1920px);
     transform: rotate(90deg) translateY(-100vh);
     transform-origin: top left;
 

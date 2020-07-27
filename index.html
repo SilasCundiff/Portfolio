@@ -7,7 +7,8 @@
         <script src="https://kit.fontawesome.com/adab6aa253.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://use.typekit.net/nhl2vbl.css">
         <link rel="stylesheet" href="public/css/style.css">
-        <title>Silas Cundiff</title>
+		<title>Silas Cundiff</title>
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     </head>
 
     <body>
@@ -1238,6 +1239,180 @@
 				<!-- TODO decide how to implement project display. Courasel, Cards, or otherwise -->
                 <section class="container__projects" id="projects">
                     <div class="container__projects__content-wrapper">
+						<div class="projects__button-container" id="projects__button-container">
+							<button class="btn btn--small  btn--active" onclick="filterType('all')">All Projects</button>
+							<button class="btn btn--small" onclick="filterType('projects__project-type--css')">Pure HTML & CSS</button>
+							<button class="btn btn--small" onclick="filterType('projects__project-type--javascript')">JavaScript</button>
+							<button class="btn btn--small" onclick="filterType('projects__project-type--react')">React</button>
+							<button class="btn btn--small" onclick="filterType('projects__project-type--php')">PHP</button>
+						</div>
+						<div class="projects__grid">
+							<div class="projects__grid--card projects__project-type--css">
+								<div class="projects__grid--card--inner">
+									<div class="projects__grid--card--front">
+										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
+									</div>
+									<div class="projects__grid--card--back">
+										<span class="projects__grid--card__description">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
+										</span>
+										<a class="btn btn--small projects__grid--card__link" href="#">View Project</a>
+									</div>
+								</div>
+							</div>
+							<div class="projects__grid--card projects__project-type--css">
+								<div class="projects__grid--card--inner">
+									<div class="projects__grid--card--front">
+										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
+									</div>
+									<div class="projects__grid--card--back">
+										<span class="projects__grid--card__description">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
+										</span>
+										<a class="btn btn--small projects__grid--card__link" href="#">View Project</a>
+									</div>
+								</div>
+							</div>
+							<div class="projects__grid--card projects__project-type--css">
+								<div class="projects__grid--card--inner">
+									<div class="projects__grid--card--front">
+										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
+									</div>
+									<div class="projects__grid--card--back">
+										<span class="projects__grid--card__description">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
+										</span>
+										<a class="btn btn--small projects__grid--card__link" href="#">View Project</a>
+									</div>
+								</div>
+							</div>
+							<div class="projects__grid--card projects__project-type--css">
+								<div class="projects__grid--card--inner">
+									<div class="projects__grid--card--front">
+										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
+									</div>
+									<div class="projects__grid--card--back">
+										<span class="projects__grid--card__description">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
+										</span>
+										<a class="btn btn--small projects__grid--card__link" href="#">View Project</a>
+									</div>
+								</div>
+							</div>
+							<div class="projects__grid--card projects__project-type--javascript">
+								<div class="projects__grid--card--inner">
+									<div class="projects__grid--card--front">
+										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
+									</div>
+									<div class="projects__grid--card--back">
+										<span class="projects__grid--card__description">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
+										</span>
+										<a class="btn btn--small projects__grid--card__link" href="#">View Project</a>
+									</div>
+								</div>
+							</div>
+							<div class="projects__grid--card projects__project-type--javascript">
+								<div class="projects__grid--card--inner">
+									<div class="projects__grid--card--front">
+										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
+									</div>
+									<div class="projects__grid--card--back">
+										<span class="projects__grid--card__description">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
+										</span>
+										<a class="btn btn--small projects__grid--card__link" href="#">View Project</a>
+									</div>
+								</div>
+							</div>
+							<div class="projects__grid--card projects__project-type--javascript">
+								<div class="projects__grid--card--inner">
+									<div class="projects__grid--card--front">
+										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
+									</div>
+									<div class="projects__grid--card--back">
+										<span class="projects__grid--card__description">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
+										</span>
+										<a class="btn btn--small projects__grid--card__link" href="#">View Project</a>
+									</div>
+								</div>
+							</div>
+							<div class="projects__grid--card projects__project-type--javascript">
+								<div class="projects__grid--card--inner">
+									<div class="projects__grid--card--front">
+										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
+									</div>
+									<div class="projects__grid--card--back">
+										<span class="projects__grid--card__description">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
+										</span>
+										<a class="btn btn--small projects__grid--card__link" href="#">View Project</a>
+									</div>
+								</div>
+							</div>
+							<div class="projects__grid--card projects__project-type--javascript">
+								<div class="projects__grid--card--inner">
+									<div class="projects__grid--card--front">
+										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
+									</div>
+									<div class="projects__grid--card--back">
+										<span class="projects__grid--card__description">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
+										</span>
+										<a class="btn btn--small projects__grid--card__link" href="#">View Project</a>
+									</div>
+								</div>
+							</div>
+							<div class="projects__grid--card projects__project-type--react">
+								<div class="projects__grid--card--inner">
+									<div class="projects__grid--card--front">
+										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
+									</div>
+									<div class="projects__grid--card--back">
+										<span class="projects__grid--card__description">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
+										</span>
+										<a class="btn btn--small projects__grid--card__link" href="#">View Project</a>
+									</div>
+								</div>
+							</div>
+							<div class="projects__grid--card projects__project-type--react">
+								<div class="projects__grid--card--inner">
+									<div class="projects__grid--card--front">
+										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
+									</div>
+									<div class="projects__grid--card--back">
+										<span class="projects__grid--card__description">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
+										</span>
+										<a class="btn btn--small projects__grid--card__link" href="#">View Project</a>
+									</div>
+								</div>
+							</div>
+							<div class="projects__grid--card projects__project-type--php">
+								<div class="projects__grid--card--inner">
+									<div class="projects__grid--card--front">
+										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
+									</div>
+									<div class="projects__grid--card--back">
+										<span class="projects__grid--card__description">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
+										</span>
+										<a class="btn btn--small projects__grid--card__link" href="#">View Project</a>
+									</div>
+								</div>
+							</div>
+
+							
+							
+
+							
+						</div>
+
+
+
 						<div class="left-arrow"><a href="#home" class="left-arrow__link left-arrow__link--projects">&larr;</a></div>
 						<div class="right-arrow"><a href="#about" class="right-arrow__link right-arrow__link--projects">&rarr;</a></div>
                         
@@ -1246,35 +1421,34 @@
 				<!-- TODO about page -->
                 <section class="container__about" id="about">
                     <div class="container__about__content-wrapper">
-						<div class="about__bio">
-							<p class="about__bio--p">I'm a graduate from Southern Crescent Technical College <br>with a dual-degree in web design &AMP; development and computer programming. <br> I really enjoy working with <strong class="about__bio--em">HTML, CSS with SASS, and JavaScript</strong>, and I strive to make websites and apps better than what I would like to use.
+						<div class="about__bio--container">
+							<p class="about__bio--1">
+								I am Silas Cundiff, and this website was designed with the meaning of my name as inspiration. My first name means of the forest, and the Cundiff family originally used a coat of arms.
+							</p>
+							<p class="about__bio--2"><br>
+								I graduated from Southern Crescent Technical college where I majored in Computer Programming and Web Design & Development. I began with just Computer Programming, but when I took the required Website Development class, a passion for web design took root in me.
+							</p>
+							<p class="about__bio--3"><br>
+								From a young age, I have always loved making beautiful designs in games for the enjoyment of myself and others. So, when I discovered I could use that creativity alongside my other interest in programming, I immediately decided to dual-enroll.
+							</p>
+							<p class="about__bio--4"><br>
+								The design process is a lot of fun for me, starting with just the seed of an idea and building it into something I can be proud of. I put a lot of thought into every project I work on, and I hope every design decision of this website shows that.
 							</p>
 						</div>
-						<!-- TODO list skills in a more intesting way. Find alternative to bulleted lists -->
-						<div class="about__competencies">
-							<div class="about__competencies--heading">Other skills:</div>
-							<ul class="about__competencies--list">
-								<div class="about__competencies--list-left">
-									<li class="about__competencies--list-item">Git and GitHub</li>
-									<li class="about__competencies--list-item">React</li>
-									<li class="about__competencies--list-item">Python</li>
-									<li class="about__competencies--list-item">PHP</li>
-									<li class="about__competencies--list-item">SQL</li>
-								</div>
-								<div class="about__competencies--list-left">
-									<li class="about__competencies--list-item">Adobe CC including:
-										<ul class="about__competencies--sub-list">
-											<li class="about__competencies--sub-list-item">Illustrator</li>
-											<li class="about__competencies--sub-list-item">Photoshop</li>
-											<li class="about__competencies--sub-list-item">XD</li>
-											<li class="about__competencies--sub-list-item">Dreamweaver</li>
-										</ul>
-									</li>
-								</div>
-							</ul>
+						<div class="about__skill-set">
+							<div class="about__skill-set__icon-bar">
+								<i class="fab fa-html5"></i>
+								<i class="fab fa-css3"></i>
+								<i class="fab fa-sass"></i>
+								<i class="fab fa-js-square"></i>
+								<i class="fab fa-node-js"></i>
+								<i class="fab fa-npm"></i>
+								<i class="fab fa-php"></i>
+								<i class="fab fa-adobe"></i>
+							</div>
 						</div>
-						
-						<div class="about__my-thoughts">When you look at my logo you may wonder, "why a shield and tree?" <br> It was designed with my name in mind. Silas means "of the forest", <br> and Cundiff originates from a family that used a coat of arms.</div>
+
+
 						<div class="left-arrow"><a href="#projects" class="left-arrow__link left-arrow__link--about">&larr;</a></div>
 						<div class="right-arrow"><a href="#contact" class="right-arrow__link right-arrow__link--about">&rarr;</a></div>
                     </div>
@@ -1291,7 +1465,7 @@
 		<!-- TODO -->
         <footer class="footer">
             Footer
-        </footer>
+		</footer>
         <script src="index.js"></script>
     </body>
 
