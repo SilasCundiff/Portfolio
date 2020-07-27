@@ -35,14 +35,20 @@ Theme of Summer.
 
 Will consist of my current and future projects that I think display the deepest part of my skillset.
 
-Still deciding on the end design of this page. Will most likely use a fliping card or carousel system, but I'm exploring other options.
+~~Still deciding on the end design of this page. Will most likely use a fliping card or carousel system, but I'm exploring other options.~~
+- Uses a grid system to display cards. 
+- Can filter cards by project type.
+- possibly add alternate togglable grid layouts like a list type instead of cards
+
 
 ## About
 
 Theme of Fall.
 
 Provides the user a short bio about myself and key skills.
-Still exploring options, I don't want a boring old bulleted list to display my skills and achievements.
+~~Still exploring options, I don't want a boring old bulleted list to display my skills and achievements.~~
+- Near full page bio
+- Skillset displayed via icons at bottom
 
 
 ## Contact
