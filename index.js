@@ -1,7 +1,7 @@
 /*************Projects page***************/
 
 // TODO This code is a temp solution.
-// Bug: When the "ALL PROJECTS" filter is active, all elements have the class "enable assigned to them"
+// Bug: When the "ALL PROJECTS" filter is active, all elements have the class "disable assigned to them"
 // When you click off of all projects onto another button, the transition doesn't work because the class is removed immediately
 // Click between on of the filters and any other filter to see example of working transition
 
@@ -11,14 +11,11 @@ filterType("all");
 
 function filterType(filterSelected) {
     let card = document.getElementsByClassName("projects__grid--card");
-
     if (filterSelected == "all") filterSelected = "";
-
     for (let i = 0; i < card.length; i++) {
-        removeClass(card[i], "enable");
-        if (card[i].className.indexOf(filterSelected) > -1) addClass(card[i], "enable");
+        addClass(card[i], "disable");
+        if (card[i].className.indexOf(filterSelected) > -1) removeClass(card[i], "disable");
     }
-
 }
 
 function addClass(element, name) {

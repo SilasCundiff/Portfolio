@@ -261,14 +261,15 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   gap: 1rem; }
-  .container .projects__grid .enable {
-    opacity: 1;
-    visibility: visible;
-    position: relative; }
-  .container .projects__grid--card {
+  .container .projects__grid .disable {
     position: absolute;
     opacity: 0;
     visibility: hidden;
+    transition: opacity .5s; }
+  .container .projects__grid--card {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
     transition: opacity .5s;
     margin: 0 auto;
     padding: 1rem;
