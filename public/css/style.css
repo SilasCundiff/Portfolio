@@ -129,6 +129,12 @@ body {
     font-size: 1.8rem;
     margin: .5rem;
     padding: 1.2rem; }
+  .btn--contact {
+    font-size: 2.8rem;
+    border: none;
+    margin: 0 5rem;
+    color: rgba(var(--dark-rgb), 1);
+    background-color: rgba(var(--near-white-rgb), 0.8); }
 
 .container > * {
   display: flex;
@@ -161,8 +167,17 @@ body {
   right: 1.5rem; }
 
 .footer {
-  display: none;
-  background-color: slategrey; }
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1.6rem;
+  background-color: none;
+  color: rgba(var(--off-white-rgb), 0.5);
+  font-family: 'ode', serif; }
+  .footer #copyrite_year {
+    font-size: 2.2rem; }
 
 .scroll-wrapper__outter {
   width: 100vh;
@@ -215,7 +230,36 @@ body {
       line-height: 1.2; }
 
 .container__contact__content-wrapper {
-  background-color: rgba(var(--winter-light-rgb), 0.2); }
+  background-color: rgba(var(--dark-rgb), 0.8);
+  color: rgba(var(--near-white-rgb), 0.8);
+  flex-direction: column;
+  align-content: center; }
+
+.container .contact__description {
+  text-align: center;
+  margin-top: 2.8rem;
+  padding: 4.8rem;
+  flex: 1;
+  font-size: 5.8rem; }
+  .container .contact__description a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: currentColor;
+    text-transform: unset;
+    color: rgba(var(--winter-primary-rgb), 0.9); }
+
+.container .contact__form {
+  display: flex;
+  flex-direction: column; }
+  .container .contact__form__container--name, .container .contact__form__container--email, .container .contact__form__container--comments, .container .contact__form__container--buttons {
+    margin: 1rem auto; }
+  .container .contact__form__label--name, .container .contact__form__label--email, .container .contact__form__label--comments {
+    font-size: 4.2rem;
+    margin: 0 3rem 0 0; }
+  .container .contact__form__input--name, .container .contact__form__input--email, .container .contact__form__input--comments {
+    font-size: 2.8rem;
+    border-radius: 5px;
+    padding: 5px; }
 
 .container__about__content-wrapper {
   background-color: rgba(var(--dark-rgb), 0.8);
@@ -316,7 +360,6 @@ body {
   width: 100%;
   align-self: start;
   display: flex;
-  background-color: rgba(var(--dark-rgb), 0.5);
   justify-content: end; }
   .container .projects__button-container .btn {
     border-radius: 0;

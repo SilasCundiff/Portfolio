@@ -1,6 +1,6 @@
 # Silas Cundiff's Portfolio Project
 
-** Version 0.0.5 **
+** Version 0.1.0 **
 
 This is an overview of my portfolio project, what I plan to add, and what potential changes I want to make.
 
@@ -15,7 +15,7 @@ CSS written with SCSS and compiled using npm.
 Dependencies included, not all will be used until project reaches near completion.
 
 - The website consists of 4 "pages".
-- Each page has a theme coresponding to one of the four seasons.
+- Each page has a theme corresponding to one of the four seasons.
 - All 4 pages are technically on a single webpage.
 - The website scrolls horizontally.
 - Load times should be kept to a minimal and animations should not interfere with functionality.
@@ -58,5 +58,25 @@ Provides the user a short bio about myself and key skills.
 
 Theme of Winter.
 
-Will provide a simple html form for the user to contact me, most likely will use express to provide functionality.
+~~Will provide a simple html form for the user to contact me, most likely will use express to provide functionality.~~
+using a simple mailto html form for now. Will revisit porting site to node or react in the future to provide a more elegant solution.
+
+## TODO list
+
+### Markup is 99% done
+- Scan for typos and grammar mistakes
+- Possible small refactors
+- Give proper hrefs to links and alts to images
+
+### CSS
+- finish background assets
+- finish logo assets
+- polish many aspects of the site including: animations, colors, hovers, shadows, etc.
+- BUG fix projects page bug that makes transition not function when changing from "All" filter to one of the other filters.
+
+- Add media queries for every page
+- Add vendor prefixes
+- Test on multiple browsers
+
+### JS
 

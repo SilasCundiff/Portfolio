@@ -4,15 +4,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/adab6aa253.js" crossorigin="anonymous"></script>
+		<script src="https://kit.fontawesome.com/adab6aa253.js" crossorigin="anonymous"></script>
+		
         <link rel="stylesheet" href="https://use.typekit.net/nhl2vbl.css">
-        <link rel="stylesheet" href="public/css/style.css">
-		<title>Silas Cundiff</title>
+		<link rel="stylesheet" href="public/css/style.css">
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		<title>Silas Cundiff</title>
     </head>
 
     <body>
-<!-- BEM naming convention for classes -->
         <nav class="navigation">
             <ul class="navigation__list">
                 <li class="navigation__list--item"><a href="#home" class="navigation__link navigation__link--home">home</a></li>
@@ -1418,7 +1418,6 @@
                         
                     </div>
 				</section>
-				<!-- TODO about page -->
                 <section class="container__about" id="about">
                     <div class="container__about__content-wrapper">
 						<div class="about__bio--container">
@@ -1453,20 +1452,45 @@
 						<div class="right-arrow"><a href="#contact" class="right-arrow__link right-arrow__link--about">&rarr;</a></div>
                     </div>
 				</section>
-				<!-- TODO needs a form and JS to implement functionality -->
+
                 <section class="container__contact" id="contact">
                     <div class="container__contact__content-wrapper">
+						<div class="contact__description">
+							<p>
+								The primary way to contact me is through email or my <a href="#">LinkedIn</a> page.
+								If you have any questions please feel free to send me a message through email below.
+							</p>
+						</div>
+						<form class="contact__form" action="mailto:silasdcundiff@gmail.com" method="get" enctype="text/plain">
+							<div  class="contact__form__container--name">
+								<label class="contact__form__label--name" for="name">Name:</label>
+								<input class="contact__form__input--name" type="text" name="name" id="name">
+							</div>
+							<div  class="contact__form__container--email">
+								<label class="contact__form__label--email" for="email">Email:</label>
+								<input class="contact__form__input--email" type="email" name="email" id="email">
+							</div>
+							<div class="contact__form__container--comments">
+								<textarea placeholder="Enter comments here..." class="contact__form__input--comments" name="comments" cols="50" rows="8"></textarea>
+							</div>
+							<div class="contact__form__container--buttons">
+								<input class="btn btn--contact" type="submit" name="submit" value="Send" />
+								<input class="btn btn--contact" type="reset" name="reset" value="Clear Form" />
+							</div>
+						</form>
+
+
 						<div class="left-arrow"><a href="#about" class="left-arrow__link left-arrow__link--contact">&larr;</a></div>
-                        
+          
                     </div>
                 </section>
             </div>
 		</main>
 		<!-- TODO -->
         <footer class="footer">
-            Footer
+            &copy; Silas Cundiff <span id="copyrite_year"></span>
 		</footer>
-        <script src="index.js"></script>
+		<script src="index.js"></script>
     </body>
 
     </html>

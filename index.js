@@ -1,3 +1,5 @@
+
+
 /*************Projects page***************/
 
 // TODO This code is a temp solution.
@@ -54,3 +56,9 @@ for (let i = 0; i < buttons.length; i++) {
         this.className += " btn--active";
     });
 }
+
+
+/*********************footer***************************/
+
+let date = new Date();
+document.getElementById("copyrite_year").innerHTML = date.getFullYear();

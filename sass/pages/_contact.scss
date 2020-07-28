@@ -2,7 +2,50 @@
     &__contact {
 
         &__content-wrapper {
-            background-color: rgba(var(--winter-light-rgb), .2);
+            background-color: rgba(var(--dark-rgb), .8);
+            color: rgba(var(--near-white-rgb), .8);
+            flex-direction: column;
+            align-content: center;
         }
+    }
+
+    .contact {
+        &__description {
+            text-align: center;
+            margin-top: 2.8rem;
+            padding: 4.8rem;
+            flex: 1;
+            font-size: 5.8rem;
+            a {
+                @include link-unset;
+                text-transform: unset;
+                color: rgba(var(--winter-primary-rgb), .9);
+            }
+        }
+        &__form {
+            display: flex;
+            flex-direction: column;
+            &__container {
+                &--name, &--email, &--comments, &--buttons {
+                    margin: 1rem auto;
+                }
+                
+            }
+
+            &__label {
+                &--name, &--email, &--comments  {
+                    font-size: 4.2rem;
+                    margin: 0 3rem 0 0;
+                }
+            }
+            &__input {
+                &--name, &--email, &--comments {
+                    font-size: 2.8rem;
+                    border-radius: 5px;
+                    padding: 5px;
+                }
+            }
+        }
+        
     }
 }
