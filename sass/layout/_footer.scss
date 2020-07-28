@@ -1,5 +1,16 @@
 .footer 
 {
-    display: none;
-    background-color: slategrey;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1.6rem;
+    background-color: none;
+    color: rgba(var(--off-white-rgb), .5);
+    font-family: 'ode', serif;
+
+    #copyrite_year {
+        font-size: 2.2rem;
+    }
 }
