@@ -2,42 +2,65 @@
 
 .container {
     &__about {
-
         &__content-wrapper {
-            background-color: rgba(var(--dark-rgb), .8);
             font-family: var(--font-3);
-            color: rgba(var(--near-white-rgb), .8);;
-            flex-direction: column;
-            font-size: 4rem;
+            font-size: 3.8rem;
             line-height: 1.1;
-
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
         }
 
         .about {
-
             &__bio--container {
-                margin: 4rem auto;
-                padding: 2rem 4rem;
-                width: 80%;
+                margin-top: 5%;
+                flex: 1;
+                padding: 4rem;
+                width: 100%;
+                font-size: 4rem;
+                background-color: rgba(var(--dark-rgb), .2);
+                border-radius: 5px;
+
+                &--em {
+                    color: rgba(var(--fall-secondary-rgb), .8);
+                }
+
+                @include respond(880) {
+                    font-size: 5.2rem;
+                }
             }
-            
+
             &__skill-set {
                 width: 100%;
-                color: rgba(var(--off-white-rgb), .4);
-    
+                margin-top: 4rem;
+                flex: 1;
+                color: rgba(var(--fall-secondary-rgb), .8);
+
+                @include respond(1680) {
+                    margin-top: 10rem;
+                }
+
+                @include respond(1280) {
+                    margin-top: 6rem;
+                }
+
+                @include respond(880) {
+                    margin-top: 4rem;
+                }
+
                 &__icon-bar {
+
                     display: flex;
                     font-size: 7.5rem;
-                    justify-content: space-around;
+                    justify-content: space-evenly;
+
+                    @include respond(880) {
+                        font-size: 8rem;
+                    }
+
                 }
             }
         }
-
-        // p[class^="about__bio--"] {
-           
-        // }
-
-   
-
     }
 }

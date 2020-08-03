@@ -62,3 +62,15 @@ for (let i = 0; i < buttons.length; i++) {
 
 let date = new Date();
 document.getElementById("copyrite_year").innerHTML = date.getFullYear();
+
+/*********************mobile nav***************************/
+$('.nav-toggle').on("click", function()
+{
+    $(this).toggleClass('open');
+    $('.navigation').toggleClass('navigation--closed').toggleClass('navigation--open');
+});
+
+$('.navigation__link').on("click", function(){
+    $('.nav-toggle').removeClass('open');
+    $('.navigation').toggleClass('navigation--closed').toggleClass('navigation--open');
+});

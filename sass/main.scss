@@ -15,9 +15,10 @@
 @import "base/base";
 @import "base/typography";
 
-// Components - styles for reuseable componants like buttons and nav
+// Components - styles for reuseable components like buttons and nav
 @import "components/navigation";
 @import "components/button";
+@import "components/arrow-links";
 
 // Layouts - major layouts and grid setups
 @import "layout/container";

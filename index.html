@@ -6,14 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="https://kit.fontawesome.com/adab6aa253.js" crossorigin="anonymous"></script>
 		
-        <link rel="stylesheet" href="https://use.typekit.net/nhl2vbl.css">
+		<link rel="stylesheet" href="https://use.typekit.net/nhl2vbl.css">
+		<link rel="stylesheet" href="public/css/normalize.css">
 		<link rel="stylesheet" href="public/css/style.css">
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 		<title>Silas Cundiff</title>
     </head>
 
     <body>
-        <nav class="navigation">
+		<div class="nav-toggle"><div class="hamburger"></div></div>
+        <nav class="navigation navigation--closed">
             <ul class="navigation__list">
                 <li class="navigation__list--item"><a href="#home" class="navigation__link navigation__link--home">home</a></li>
                 <li class="navigation__list--item"><a href="#projects" class="navigation__link navigation__link--projects">projects</a></li>
@@ -1223,11 +1225,11 @@
                     <div class="container__home__content-wrapper">
                         <div class="intro">
                             <div class="intro__main">
-                                Hello, I'm <span class="intro__main-focus">Silas Cundiff</span> and I 
+                                Hello, I'm <span class="intro__main-focus">Silas Cundiff</span> and I <br>
                                 <span class="intro__main-focus">Design</span> and 
                                 <span class="intro__main-focus">Develop</span> websites
                             </div>
-							<div class="intro__sub">This is my place to grow and show what makes me stand out against the forest of developers</div>
+							<div class="intro__sub">Let me show you what makes me stand out <br> amongst the forest of developers</div>
 							<div class="intro__cta-wrapper">
 								<a href="#projects" class="btn cta-btn">Projects</a>
 								<a href="#contact" class="btn cta-btn">Hire Me</a>
@@ -1236,33 +1238,51 @@
 						<div class="right-arrow"><a href="#projects" class="right-arrow__link right-arrow__link--home">&rarr;</a></div>
                     </div>
 				</section>
-				<!-- TODO decide how to implement project display. Courasel, Cards, or otherwise -->
                 <section class="container__projects" id="projects">
                     <div class="container__projects__content-wrapper">
 						<div class="projects__button-container" id="projects__button-container">
-							<button class="btn btn--small  btn--active" onclick="filterType('all')">All Projects</button>
-							<button class="btn btn--small" onclick="filterType('projects__project-type--css')">Pure HTML & CSS</button>
-							<button class="btn btn--small" onclick="filterType('projects__project-type--javascript')">JavaScript</button>
-							<button class="btn btn--small" onclick="filterType('projects__project-type--react')">React</button>
-							<button class="btn btn--small" onclick="filterType('projects__project-type--php')">PHP</button>
+							<!-- <i class="fab fa-html5"></i>
+								<i class="fab fa-css3"></i>
+								<i class="fab fa-sass"></i>
+								<i class="fab fa-js-square"></i>
+								<i class="fab fa-node-js"></i>
+								<i class="fab fa-npm"></i>
+								<i class="fab fa-php"></i>
+								<i class="fab fa-adobe"></i> 
+							<i class="fab fa-react"></i>
+							
+							-->
+							<button class="btn btn--project btn--all  btn--active" onclick="filterType('all')"><i class="fas fa-asterisk"></i></button>
+							<button class="btn btn--project btn--css" onclick="filterType('projects__project-type--css')">
+								<i class="fab fa-css3"></i>
+							</button>
+							<button class="btn btn--project btn--javascript" onclick="filterType('projects__project-type--javascript')">
+								<i class="fab fa-js-square"></i>
+							</button>
+							<button class="btn btn--project btn--react" onclick="filterType('projects__project-type--react')">
+								<i class="fab fa-react"></i>
+							</button>
+							<button class="btn btn--project btn--php" onclick="filterType('projects__project-type--php')">
+								<i class="fab fa-php"></i>
+							</button>
 						</div>
 						<div class="projects__grid">
 							<div class="projects__grid--card projects__project-type--css">
-								<div class="projects__grid--card--inner">
+								<div class="projects__grid--card--inner projects__grid--card--inner--css">
 									<div class="projects__grid--card--front">
 										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
 									</div>
 									<div class="projects__grid--card--back">
 										<span class="projects__grid--card__description">
 											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
-											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
+											
 										</span>
-										<a class="btn btn--small projects__grid--card__link" href="#">View Project</a>
+										<a class="btn btn--card projects__grid--card__link" href="#">View Project</a>
 									</div>
 								</div>
 							</div>
 							<div class="projects__grid--card projects__project-type--css">
-								<div class="projects__grid--card--inner">
+								<div class="projects__grid--card--inner projects__grid--card--inner--css">
 									<div class="projects__grid--card--front">
 										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
 									</div>
@@ -1270,12 +1290,12 @@
 										<span class="projects__grid--card__description">
 											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
 										</span>
-										<a class="btn btn--small projects__grid--card__link" href="#">View Project</a>
+										<a class="btn btn--card projects__grid--card__link" href="#">View Project</a>
 									</div>
 								</div>
 							</div>
 							<div class="projects__grid--card projects__project-type--css">
-								<div class="projects__grid--card--inner">
+								<div class="projects__grid--card--inner projects__grid--card--inner--css">
 									<div class="projects__grid--card--front">
 										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
 									</div>
@@ -1283,12 +1303,12 @@
 										<span class="projects__grid--card__description">
 											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
 										</span>
-										<a class="btn btn--small projects__grid--card__link" href="#">View Project</a>
+										<a class="btn btn--card projects__grid--card__link" href="#">View Project</a>
 									</div>
 								</div>
 							</div>
 							<div class="projects__grid--card projects__project-type--css">
-								<div class="projects__grid--card--inner">
+								<div class="projects__grid--card--inner projects__grid--card--inner--css">
 									<div class="projects__grid--card--front">
 										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
 									</div>
@@ -1296,12 +1316,12 @@
 										<span class="projects__grid--card__description">
 											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
 										</span>
-										<a class="btn btn--small projects__grid--card__link" href="#">View Project</a>
+										<a class="btn btn--card projects__grid--card__link" href="#">View Project</a>
 									</div>
 								</div>
 							</div>
 							<div class="projects__grid--card projects__project-type--javascript">
-								<div class="projects__grid--card--inner">
+								<div class="projects__grid--card--inner projects__grid--card--inner--javascript">
 									<div class="projects__grid--card--front">
 										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
 									</div>
@@ -1309,12 +1329,12 @@
 										<span class="projects__grid--card__description">
 											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
 										</span>
-										<a class="btn btn--small projects__grid--card__link" href="#">View Project</a>
+										<a class="btn btn--card projects__grid--card__link" href="#">View Project</a>
 									</div>
 								</div>
 							</div>
 							<div class="projects__grid--card projects__project-type--javascript">
-								<div class="projects__grid--card--inner">
+								<div class="projects__grid--card--inner projects__grid--card--inner--javascript">
 									<div class="projects__grid--card--front">
 										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
 									</div>
@@ -1322,12 +1342,12 @@
 										<span class="projects__grid--card__description">
 											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
 										</span>
-										<a class="btn btn--small projects__grid--card__link" href="#">View Project</a>
+										<a class="btn btn--card projects__grid--card__link" href="#">View Project</a>
 									</div>
 								</div>
 							</div>
 							<div class="projects__grid--card projects__project-type--javascript">
-								<div class="projects__grid--card--inner">
+								<div class="projects__grid--card--inner projects__grid--card--inner--javascript">
 									<div class="projects__grid--card--front">
 										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
 									</div>
@@ -1335,12 +1355,12 @@
 										<span class="projects__grid--card__description">
 											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
 										</span>
-										<a class="btn btn--small projects__grid--card__link" href="#">View Project</a>
+										<a class="btn btn--card projects__grid--card__link" href="#">View Project</a>
 									</div>
 								</div>
 							</div>
 							<div class="projects__grid--card projects__project-type--javascript">
-								<div class="projects__grid--card--inner">
+								<div class="projects__grid--card--inner projects__grid--card--inner--javascript">
 									<div class="projects__grid--card--front">
 										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
 									</div>
@@ -1348,12 +1368,12 @@
 										<span class="projects__grid--card__description">
 											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
 										</span>
-										<a class="btn btn--small projects__grid--card__link" href="#">View Project</a>
+										<a class="btn btn--card projects__grid--card__link" href="#">View Project</a>
 									</div>
 								</div>
 							</div>
 							<div class="projects__grid--card projects__project-type--javascript">
-								<div class="projects__grid--card--inner">
+								<div class="projects__grid--card--inner projects__grid--card--inner--javascript">
 									<div class="projects__grid--card--front">
 										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
 									</div>
@@ -1361,12 +1381,12 @@
 										<span class="projects__grid--card__description">
 											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
 										</span>
-										<a class="btn btn--small projects__grid--card__link" href="#">View Project</a>
+										<a class="btn btn--card projects__grid--card__link" href="#">View Project</a>
 									</div>
 								</div>
 							</div>
 							<div class="projects__grid--card projects__project-type--react">
-								<div class="projects__grid--card--inner">
+								<div class="projects__grid--card--inner projects__grid--card--inner--react">
 									<div class="projects__grid--card--front">
 										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
 									</div>
@@ -1374,12 +1394,12 @@
 										<span class="projects__grid--card__description">
 											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
 										</span>
-										<a class="btn btn--small projects__grid--card__link" href="#">View Project</a>
+										<a class="btn btn--card projects__grid--card__link" href="#">View Project</a>
 									</div>
 								</div>
 							</div>
 							<div class="projects__grid--card projects__project-type--react">
-								<div class="projects__grid--card--inner">
+								<div class="projects__grid--card--inner projects__grid--card--inner--react">
 									<div class="projects__grid--card--front">
 										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
 									</div>
@@ -1387,12 +1407,12 @@
 										<span class="projects__grid--card__description">
 											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
 										</span>
-										<a class="btn btn--small projects__grid--card__link" href="#">View Project</a>
+										<a class="btn btn--card projects__grid--card__link" href="#">View Project</a>
 									</div>
 								</div>
 							</div>
 							<div class="projects__grid--card projects__project-type--php">
-								<div class="projects__grid--card--inner">
+								<div class="projects__grid--card--inner projects__grid--card--inner--php">
 									<div class="projects__grid--card--front">
 										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
 									</div>
@@ -1400,19 +1420,28 @@
 										<span class="projects__grid--card__description">
 											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
 										</span>
-										<a class="btn btn--small projects__grid--card__link" href="#">View Project</a>
+										<a class="btn btn--card projects__grid--card__link" href="#">View Project</a>
 									</div>
 								</div>
 							</div>
-
+							<div class="projects__grid--card projects__project-type--php">
+								<div class="projects__grid--card--inner projects__grid--card--inner--php">
+									<div class="projects__grid--card--front">
+										<img src='img/original.png' class="projects__grid--card__image" alt=''/>
+									</div>
+									<div class="projects__grid--card--back">
+										<span class="projects__grid--card__description">
+											Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam est autem, quidem necessitatibus quae sequi rerum illo impedit.
+										</span>
+										<a class="btn btn--card projects__grid--card__link" href="#">View Project</a>
+									</div>
+								</div>
+							</div>
 							
 							
 
 							
 						</div>
-
-
-
 						<div class="left-arrow"><a href="#home" class="left-arrow__link left-arrow__link--projects">&larr;</a></div>
 						<div class="right-arrow"><a href="#about" class="right-arrow__link right-arrow__link--projects">&rarr;</a></div>
                         
@@ -1422,16 +1451,16 @@
                     <div class="container__about__content-wrapper">
 						<div class="about__bio--container">
 							<p class="about__bio--1">
-								I am Silas Cundiff, and this website was designed with the meaning of my name as inspiration. My first name means of the forest, and the Cundiff family originally used a coat of arms.
+								I am Silas Cundiff, and this website was designed with the meaning of my name as inspiration. My first name means <span class="about__bio--container--em">"of the forest"</span>, and the Cundiff family originally used a <span class="about__bio--container--em">Coat of Arms</span>.
 							</p>
 							<p class="about__bio--2"><br>
-								I graduated from Southern Crescent Technical college where I majored in Computer Programming and Web Design & Development. I began with just Computer Programming, but when I took the required Website Development class, a passion for web design took root in me.
+								I graduated from Southern Crescent Technical college where <span class="about__bio--container--em">I majored in Computer Programming and Web Design & Development</span>. <br> I began Computer Programming, but when I took the required Website Development class, a passion for web design took root in me.
 							</p>
 							<p class="about__bio--3"><br>
-								From a young age, I have always loved making beautiful designs in games for the enjoyment of myself and others. So, when I discovered I could use that creativity alongside my other interest in programming, I immediately decided to dual-enroll.
+								From a young age, <span class="about__bio--container--em">I have always loved making beautiful designs</span> in games for the enjoyment of myself and others. So, when I discovered I could use that creativity alongside my other interest in programming, I immediately decided to dual-enroll.
 							</p>
 							<p class="about__bio--4"><br>
-								The design process is a lot of fun for me, starting with just the seed of an idea and building it into something I can be proud of. I put a lot of thought into every project I work on, and I hope every design decision of this website shows that.
+								<span class="about__bio--container--em">The design process is a lot of fun for me</span>, starting with just the seed of an idea and building it into something I can be proud of. I put a lot of thought into every project I work on, and I hope every design decision of this website shows that.
 							</p>
 						</div>
 						<div class="about__skill-set">
@@ -1456,8 +1485,57 @@
                 <section class="container__contact" id="contact">
                     <div class="container__contact__content-wrapper">
 						<div class="contact__description">
+							<h1 class="contact__description--heading">Let me be your <br> <span class="contact__description--heading--em">Knerd in Shining Armor!</span></h1>
+							<p class="contact__description--main">Please send me a message, or call me!</p>
+							<p class="contact__description--phone">111-222-4444</p>
+							<div class="contact__description--socials">
+								<!-- TODO add link hrefs -->
+								<a class="contact__methods--email" href="mailto:silasdcundiff@gmail.com"><i class="fas fa-envelope-square"></i></a>
+								<a class="contact__methods--github" href="#"><i class="fab fa-github-square"></i></a>
+								<a class="contact__methods--linkedin" href=""><i class="fab fa-linkedin"></i></a>
+							</div>
+							
+						</div>
+						<!-- <div class="contact__methods">
+							<p class="contact__methods--phone">111-222-4444</p>
+							<div class="contact__socials--icons">
+								<a class="contact__methods--email" href="mailto:silasdcundiff@gmail.com"><i class="fas fa-envelope-square"></i></a>
+								<a class="contact__methods--github" href="#"><i class="fab fa-github-square"></i></a>
+								<a class="contact__methods--linkedin" href=""><i class="fab fa-linkedin"></i></a>
+							</div>
+						</div> -->
+						<!-- <div class="contact__form--container">
+							<form class="contact__form--form" action="mailto:silasdcundiff@gmail.com" method="get" enctype="text/plain">
+								<div  class="contact__form__container--company">
+									<label class="contact__form__label--company" for="company">company:</label>
+									<input class="contact__form__input--company" type="text" name="company" id="company">
+								</div>
+								<div  class="contact__form__container--name">
+									<label class="contact__form__label--name" for="name">Name:</label>
+									<input class="contact__form__input--name" type="text" name="name" id="name">
+								</div>
+								<div  class="contact__form__container--phone">
+									<label class="contact__form__label--phone" for="phone">phone:</label>
+									<input class="contact__form__input--phone" type="tel" name="phone" id="phone">
+								</div>
+								<div  class="contact__form__container--email">
+									<label class="contact__form__label--email" for="email">Email:</label>
+									<input class="contact__form__input--email" type="email" name="email" id="email">
+								</div>
+								<div class="contact__form__container--comments">
+									<textarea placeholder="Enter comments here..." class="contact__form__input--comments" name="comments" cols="50" rows="8"></textarea>
+								</div>
+								<div class="contact__form__container--buttons">
+									<input class="btn btn--contact" type="submit" name="submit" value="Send" />
+									<input class="btn btn--contact" type="reset" name="reset" value="Clear Form" />
+								</div>
+							</form>
+						</div> -->
+
+
+						<!-- <div class="contact__description">
 							<p>
-								The primary way to contact me is through email or my <a href="#">LinkedIn</a> page.
+								The primary way to contact me is through email or my <a href="#">LinkedIn</a> page. <br>
 								If you have any questions please feel free to send me a message through email below.
 							</p>
 						</div>
@@ -1477,7 +1555,7 @@
 								<input class="btn btn--contact" type="submit" name="submit" value="Send" />
 								<input class="btn btn--contact" type="reset" name="reset" value="Clear Form" />
 							</div>
-						</form>
+						</form> -->
 
 
 						<div class="left-arrow"><a href="#about" class="left-arrow__link left-arrow__link--contact">&larr;</a></div>
@@ -1490,6 +1568,7 @@
         <footer class="footer">
             &copy; Silas Cundiff <span id="copyrite_year"></span>
 		</footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
 		<script src="index.js"></script>
     </body>
 

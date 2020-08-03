@@ -3,3 +3,41 @@
     text-decoration: none;
     color: currentColor;
 }
+
+@mixin button-animate($color, $background-color, $translateX, $translateY) {
+    color: $color;
+    background-color: $background-color;
+    transform: translate($translateX, $translateY);
+    transition: all .5s;
+}
+
+/* 
+Breakpoints 
+2880 x 1440 (largest I will try to support)
+2560 x 1080
+2160 x 1440
+2048 x 1080
+1920 x 1080 - native, what the site was designed for
+1680 x 1050 - breakpoint for when stuff starts messing up
+1600 x 900
+1440 x 900
+1280 x 720 - 720 hd -- most tablets between 1080 and this
+1024 x 768
+800 x 600
+720 x 480
+640 x 350
+600 x 300 or less
+
+*/
+
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == 1680 {@media (max-width: 105em) {@content};}
+    @if $breakpoint == 1440 {@media (max-width: 90em) {@content};}
+    @if $breakpoint == 1280 {@media (max-width: 80em) {@content};}
+    @if $breakpoint == 1024 {@media (max-width: 64em) {@content};}
+    @if $breakpoint == 880 {@media (max-width: 56.25em) {@content};}
+    @if $breakpoint == 768 {@media (max-width: 50em) {@content};}
+    // @if $breakpoint == 690 {@media (max-width: 40em) {@content};} //for home sub paragraph & projects page grid
+    @if $breakpoint == 414 {@media (max-width: 37.5em) {@content};}
+}
