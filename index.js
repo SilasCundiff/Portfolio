@@ -1,13 +1,11 @@
-
-
 /*************Projects page***************/
 
 // TODO This code is a temp solution.
 // Bug: When the "ALL PROJECTS" filter is active, all elements have the class "disable assigned to them"
-// When you click off of all projects onto another button, the transition doesn't work because the class is removed immediately
+// * When you click off of all projects onto another button, the transition doesn't work because the class is removed immediately
 // Click between on of the filters and any other filter to see example of working transition
 
-// Potential solution: implement a toggle so the class is never "removed", just changed to a different class
+// ? Potential solution: implement a toggle so the class is never "removed", just changed to a different class
 
 filterType("all");
 
@@ -64,13 +62,12 @@ let date = new Date();
 document.getElementById("copyrite_year").innerHTML = date.getFullYear();
 
 /*********************mobile nav***************************/
-$('.nav-toggle').on("click", function()
-{
+$('.nav-toggle').on("click", function () {
     $(this).toggleClass('open');
     $('.navigation').toggleClass('navigation--closed').toggleClass('navigation--open');
 });
 
-$('.navigation__link').on("click", function(){
+$('.navigation__link').on("click", function () {
     $('.nav-toggle').removeClass('open');
     $('.navigation').toggleClass('navigation--closed').toggleClass('navigation--open');
 });

@@ -1,6 +1,6 @@
 # Silas Cundiff's Portfolio Project
 
-** Version 0.1.0 **
+** Version 0.1.3 **
 
 This is an overview of my portfolio project, what I plan to add, and what potential changes I want to make.
 
@@ -39,7 +39,7 @@ Will consist of my current and future projects that I think display the deepest 
 
 - Uses a grid system to display cards. 
 - Can filter cards by project type.
-- possibly add alternate togglable grid layouts like a list type instead of cards
+- possibly add alternate toggle-able grid layouts like a list type instead of cards
 
 
 ## About
@@ -59,7 +59,7 @@ Provides the user a short bio about myself and key skills.
 Theme of Winter.
 
 ~~Will provide a simple html form for the user to contact me, most likely will use express to provide functionality.~~
-using a simple mailto html form for now. Will revisit porting site to node or react in the future to provide a more elegant solution.
+Scrapped the form because I decided it didn't fit the theme I was going for. Instead providing links to socials and a phone number
 
 ## TODO list
 
@@ -74,7 +74,7 @@ using a simple mailto html form for now. Will revisit porting site to node or re
 - polish many aspects of the site including: animations, colors, hovers, shadows, etc.
 - BUG fix projects page bug that makes transition not function when changing from "All" filter to one of the other filters.
 
-- Add media queries for every page
+- ~~Add media queries for every page~~
 - Add vendor prefixes
 - Test on multiple browsers
 

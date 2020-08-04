@@ -26,8 +26,19 @@
                     color: rgba(var(--fall-secondary-rgb), .8);
                 }
 
-                @include respond(880) {
-                    font-size: 5.2rem;
+                @include respond(1280) {
+                    margin-top: 10%;
+                    flex-basis: 70%;
+                    flex-grow: 0;
+                    flex-shrink: 1;
+                }
+
+                @include respond(600) {
+                    font-size: 3.4rem;
+                }
+
+                @include respond(375) {
+                    font-size: 3rem;
                 }
             }
 
@@ -49,17 +60,28 @@
                     margin-top: 4rem;
                 }
 
-                &__icon-bar {
+                @include respond(375) {
+                    margin-top: 2rem;
+                }
 
+                &__icon-bar {
                     display: flex;
                     font-size: 7.5rem;
                     justify-content: space-evenly;
 
-                    @include respond(880) {
-                        font-size: 8rem;
+                    @include respond(420) {
+                        font-size: 6.4rem;
                     }
 
+                    @include gradient-animate(90deg,
+                        rgba(var(--fall-dark-rgb), .8),
+                        rgba(var(--fall-secondary-rgb), .8),
+                        rgba(var(--fall-light-rgb), .8),
+                        30s);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
                 }
+
             }
         }
     }

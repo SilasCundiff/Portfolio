@@ -9,57 +9,105 @@
 
     .contact {
         &__description {
-                height: 100%;
-                width: 50%;
-                font-size: 5rem;
-                font-family: var(--font-1);
-                text-align: center;
-                line-height: .8;
-                position: absolute;
-                top: 3rem;
-                right: 8rem;
-                @include respond(1280) {
-                    top: 0;
-                    right: 0;
-                    position: relative;
-                    margin: 10% auto;
-                    width: 80%;
-                    font-size: 12rem;
-                }
-                @include respond(1024) {
-                    margin: 20% auto;
-                    font-size: 8rem;
-                }
-               @include respond(768) {
-                    margin: 50% auto;
-                    width: 100%;
-                    font-size: 6rem;
-               }
+            position: absolute;
+            top: 3rem;
+            right: 8rem;
+            height: 100%;
+            width: 50%;
+            font-size: 5rem;
+            font-family: var(--font-1);
+            text-align: center;
+            line-height: .8;
+
+            @include respond(1280) {
+                position: relative;
+                top: 0;
+                right: 0;
+                margin: 10% auto;
+                width: 80%;
+                font-size: 12rem;
+            }
+
+            @include respond(1024) {
+                margin: 20% auto;
+                font-size: 8rem;
+            }
+
+            @include respond(768) {
+                margin: 50% auto;
+                width: 100%;
+                font-size: 6rem;
+            }
+
+            @include respond(420) {
+                margin: 40% auto;
+            }
+
             &--heading {
-                font-weight: 400;
                 margin-bottom: 4rem;
+                font-weight: 400;
+
                 &--em {
                     color: rgba(var(--winter-secondary-rgb), 1);
+                    @include gradient-animate(90deg,
+                        rgba(var(--winter-dark-rgb), .8),
+                        rgba(var(--winter-secondary-rgb), .8),
+                        rgba(var(--winter-light-rgb), .8),
+                        30s);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                @include respond(420) {
+                    font-size: 10rem;
+                    line-height: 1.2;
                 }
             }
+
             &--main {
+                margin-bottom: 2rem;
                 line-height: 1;
                 font-family: var(--font-3);
-                margin-bottom: 2rem;
+
+                @include respond(420) {
+                    font-size: 7rem;
+                }
             }
+
             &--phone {
-                font-size: 6rem;
                 width: 50%;
                 margin: 2rem auto;
                 padding: 2rem 0 2rem;
-                border-bottom: solid currentColor 1px;
-            }
-            &--socials {
                 font-size: 6rem;
+                border-bottom: solid currentColor 1px;
+
+                @include respond(420) {
+                    font-size: 8rem;
+                }
+            }
+
+            &--socials {
                 margin-top: 2rem;
-                & > * {
-                    color: rgba(var(--winter-secondary-rgb), 1);
+                font-size: 6rem;
+
+                &>* {
                     padding: 0 2rem;
+                    color: rgba(var(--winter-secondary-rgb), 1);
+                    @include gradient-animate(90deg,
+                        rgba(var(--winter-dark-rgb), .8),
+                        rgba(var(--winter-secondary-rgb), .8),
+                        rgba(var(--winter-light-rgb), .8),
+                        30s);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+
+                    &:hover {
+                        @include button-animate(rgba(var(--winter-primary-rgb), .8), null, 0, 0);
+                    }
+                }
+
+                @include respond(420) {
+                    font-size: 8rem;
                 }
             }
         }
