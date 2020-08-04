@@ -71,3 +71,12 @@ $('.navigation__link').on("click", function () {
     $('.nav-toggle').removeClass('open');
     $('.navigation').toggleClass('navigation--closed').toggleClass('navigation--open');
 });
+
+
+
+// horizontal testing
+// scroll-snap-align: center;
+
+$( window ).resize(function() {
+    
+  });
