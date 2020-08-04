@@ -1,0 +1,19 @@
+.left-arrow, .right-arrow {
+    font-size: 4rem;
+    line-height: 0;
+    position: absolute;
+    bottom: 3.5rem;
+    &__link {
+        @include link-unset;
+        color: rgba(var(--near-white-rgb), .8);
+    }
+    @include respond(1024){ 
+        display: none;
+    }
+}
+.left-arrow {
+    left: 1.5rem;
+}
+.right-arrow {
+    right: 1.5rem;
+}

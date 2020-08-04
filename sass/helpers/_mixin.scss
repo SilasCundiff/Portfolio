@@ -1,5 +1,36 @@
+@mixin respond($breakpoint) {
+    @if $breakpoint == 1680 {@media (max-width: 105em) {@content};}
+    @if $breakpoint == 1440 {@media (max-width: 90em) {@content};}
+    @if $breakpoint == 1280 {@media (max-width: 80em) {@content};}
+    @if $breakpoint == 1024 {@media (max-width: 64em) {@content};}
+    @if $breakpoint == 880 {@media (max-width: 56.25em) {@content};}
+    @if $breakpoint == 768 {@media (max-width: 50em) {@content};}
+    @if $breakpoint == 600 {@media (max-width: 40em) {@content};}
+    @if $breakpoint == 420 {@media (max-width: 37.5em) {@content};}
+    @if $breakpoint == 375 {@media (max-width: 35em) {@content};}
+}
+
 @mixin link-unset {
     text-transform: uppercase;
     text-decoration: none;
     color: currentColor;
+}
+
+@mixin button-animate($color, $background-color, $translateX, $translateY) {
+    color: $color;
+    background-color: $background-color;
+    transform: translate($translateX, $translateY);
+    transition: all .5s;
+}
+
+
+// Gradiant animations
+@mixin gradient-animate($deg, $color1, $color2, $color3, $time) {
+    background: linear-gradient($deg, $color1, $color2, $color3);
+    background-size: 600% 600%;
+
+    -webkit-animation: GradientScrollRight $time ease infinite;
+    -moz-animation: GradientScrollRight $time ease infinite;
+    -o-animation: GradientScrollRight $time ease infinite;
+    animation: GradientScrollRight $time ease infinite;
 }

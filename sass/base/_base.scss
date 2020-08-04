@@ -11,6 +11,14 @@ html {
     // Standardize font-size to 10px for better control
     font-size: 62.5%;
     font-family: var(--font-3);
+
+    @include respond(1680) {font-size: 56.25%;}
+    @include respond(1440) {font-size: 50%;}
+    @include respond(1280) {font-size: 43.75%;}
+    @include respond(1024) {font-size: 42%;}
+    @include respond(880) {font-size: 38.25%;}
+    @include respond(768) {font-size: 33.5%;}
+
 }
 
 body {

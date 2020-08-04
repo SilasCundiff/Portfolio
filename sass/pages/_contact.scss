@@ -2,50 +2,114 @@
     &__contact {
 
         &__content-wrapper {
-            background-color: rgba(var(--dark-rgb), .8);
-            color: rgba(var(--near-white-rgb), .8);
-            flex-direction: column;
-            align-content: center;
+            font-size: 4rem;
+            text-align: center;
         }
     }
 
     .contact {
         &__description {
+            position: absolute;
+            top: 3rem;
+            right: 8rem;
+            height: 100%;
+            width: 50%;
+            font-size: 5rem;
+            font-family: var(--font-1);
             text-align: center;
-            margin-top: 2.8rem;
-            padding: 4.8rem;
-            flex: 1;
-            font-size: 5.8rem;
-            a {
-                @include link-unset;
-                text-transform: unset;
-                color: rgba(var(--winter-primary-rgb), .9);
-            }
-        }
-        &__form {
-            display: flex;
-            flex-direction: column;
-            &__container {
-                &--name, &--email, &--comments, &--buttons {
-                    margin: 1rem auto;
-                }
-                
+            line-height: .8;
+
+            @include respond(1280) {
+                position: relative;
+                top: 0;
+                right: 0;
+                margin: 10% auto;
+                width: 80%;
+                font-size: 12rem;
             }
 
-            &__label {
-                &--name, &--email, &--comments  {
-                    font-size: 4.2rem;
-                    margin: 0 3rem 0 0;
+            @include respond(1024) {
+                margin: 20% auto;
+                font-size: 8rem;
+            }
+
+            @include respond(768) {
+                margin: 50% auto;
+                width: 100%;
+                font-size: 6rem;
+            }
+
+            @include respond(420) {
+                margin: 40% auto;
+            }
+
+            &--heading {
+                margin-bottom: 4rem;
+                font-weight: 400;
+
+                &--em {
+                    color: rgba(var(--winter-secondary-rgb), 1);
+                    @include gradient-animate(90deg,
+                        rgba(var(--winter-dark-rgb), .8),
+                        rgba(var(--winter-secondary-rgb), .8),
+                        rgba(var(--winter-light-rgb), .8),
+                        30s);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                @include respond(420) {
+                    font-size: 10rem;
+                    line-height: 1.2;
                 }
             }
-            &__input {
-                &--name, &--email, &--comments {
-                    font-size: 2.8rem;
-                    border-radius: 5px;
-                    padding: 5px;
+
+            &--main {
+                margin-bottom: 2rem;
+                line-height: 1;
+                font-family: var(--font-3);
+
+                @include respond(420) {
+                    font-size: 7rem;
+                }
+            }
+
+            &--phone {
+                width: 50%;
+                margin: 2rem auto;
+                padding: 2rem 0 2rem;
+                font-size: 6rem;
+                border-bottom: solid currentColor 1px;
+
+                @include respond(420) {
+                    font-size: 8rem;
+                }
+            }
+
+            &--socials {
+                margin-top: 2rem;
+                font-size: 6rem;
+
+                &>* {
+                    padding: 0 2rem;
+                    color: rgba(var(--winter-secondary-rgb), 1);
+                    @include gradient-animate(90deg,
+                        rgba(var(--winter-dark-rgb), .8),
+                        rgba(var(--winter-secondary-rgb), .8),
+                        rgba(var(--winter-light-rgb), .8),
+                        30s);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+
+                    &:hover {
+                        @include button-animate(rgba(var(--winter-primary-rgb), .8), null, 0, 0);
+                    }
+                }
+
+                @include respond(420) {
+                    font-size: 8rem;
                 }
             }
         }
-        
     }
 }

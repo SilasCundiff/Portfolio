@@ -7,8 +7,16 @@
     overflow-x: hidden;
     position: absolute;
     scrollbar-width: none;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: both mandatory;
+    scroll-snap-stop: always;
     scroll-behavior: smooth;
+
+    // un-rotate for smaller screens
+    @include respond(1024) {
+        width: 100vw;
+        height: 100vh;
+        transform: rotate(0) translateX(0);
+    }
 }
 .scroll-wrapper__outter::-webkit-scrollbar {
     display: none;
@@ -16,10 +24,17 @@
 
 .scroll-wrapper__inner {
     display: grid;
-    grid-template-columns: repeat(4, 1920px);
+    // TODO media queries for grid sizes 1920+ and 1920 - 1024
+    grid-template-columns: repeat(4, auto);
+    gap: 0;
     transform: rotate(90deg) translateY(-100vh);
     transform-origin: top left;
-
+    // un-rotate for smaller screens
+    @include respond(1024) {
+        transform: rotate(0) translateX(0);
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
     &>* {
         width: 100vw;
         height: 100vh;

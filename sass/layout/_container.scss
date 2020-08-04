@@ -1,37 +1,11 @@
 .container {
-
-    &>* {
-        display: flex;
-        align-items: center;
-    }
     div[class$="__content-wrapper"] {
-        height: 93%;
+        height: 100%;
         min-width: 100%;
-        margin: 4rem 0 1rem;
         padding: 2rem;
-        border-radius: 10px;
-        display: flex;
         position: relative;
-    }
-
- 
-
-    .left-arrow, .right-arrow {
-        font-size: 3.5rem;
-        line-height: 0;
-        position: absolute;
-        bottom: 2rem;
-        &__link {
-            @include link-unset;
-            color: rgba(var(--near-white-rgb), .8);
-        }
-    }
-
-    .left-arrow {
-       left: 1.5rem;
-    }
-    .right-arrow {
-        right: 1.5rem;
+        color: rgba(var(--near-white-rgb), .8);
+        background-color: rgba(var(--dark-rgb), .8);
     }
 
 }

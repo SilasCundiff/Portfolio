@@ -5,12 +5,20 @@
     left: 0;
     right: 0;
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 2rem;
     background-color: none;
-    color: rgba(var(--off-white-rgb), .5);
+    color: rgba(var(--off-white-rgb), .7);
     font-family: 'ode', serif;
+    @include respond(1680) {
+        font-size: 2.6rem;
+    }
 
     #copyrite_year {
-        font-size: 2.2rem;
+        font-size: 2.6rem;
+        @include respond(1680) {
+            font-size: 3.2rem;
+        }
     }
+
+    
 }

@@ -20,5 +20,7 @@
     "jquery": "^3.5.1",
     "jsdom": "^16.3.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
 }
