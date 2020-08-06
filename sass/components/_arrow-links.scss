@@ -1,11 +1,15 @@
 .left-arrow, .right-arrow {
     font-size: 4rem;
-    line-height: 0;
+    // line-height: 0;
     position: absolute;
     bottom: 3.5rem;
+    
+    
+    z-index: 100;
     &__link {
         @include link-unset;
         color: rgba(var(--near-white-rgb), .8);
+        padding: 0 2rem;
     }
     @include respond(1024){ 
         display: none;

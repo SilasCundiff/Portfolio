@@ -5,11 +5,13 @@
         position: fixed;
         height: 120%;
         width: auto;
-        top: 0;
+        bottom: -20%;
         left: 0;
         right: 0;
         z-index: -1;
-
+        @include respond(1024) {
+            height: 110%;
+        }
         &-st0 {
             clip-path: url(#XMLID_2_);
         }

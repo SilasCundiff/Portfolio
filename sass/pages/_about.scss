@@ -4,8 +4,6 @@
     &__about {
         &__content-wrapper {
             font-family: var(--font-3);
-            font-size: 3.8rem;
-            line-height: 1.1;
             display: flex;
             flex-direction: column;
             justify-items: center;
@@ -14,11 +12,12 @@
 
         .about {
             &__bio--container {
-                margin-top: 5%;
                 flex: 1;
-                padding: 4rem;
+                padding: 3%;
                 width: 100%;
-                font-size: 4rem;
+                height: auto;
+                max-height: 75%;
+                font-size: 3.8rem;
                 color: rgba(var(--near-white-rgb), .8);
                 background-color: rgba(var(--dark-rgb), .8);
                 border-radius: 5px;
@@ -27,46 +26,32 @@
                     color: rgba(var(--fall-secondary-rgb), .8);
                 }
 
-                @include respond(1280) {
+                @include respond(1680) {font-size: 3.2rem;}
+                @include respond(1440) {font-size: 3rem;}
+
+                @include respond(768) {
                     margin-top: 10%;
-                    flex-basis: 70%;
-                    flex-grow: 0;
-                    flex-shrink: 1;
+                    font-size: 4.8rem;
                 }
-
-                @include respond(600) {
-                    font-size: 3.4rem;
-                }
-
-                @include respond(375) {
-                    font-size: 3rem;
+                @include respond(420) {
+                    font-size: 3.6rem;
+                    overflow: scroll;
                 }
             }
 
             &__skill-set {
                 width: 100%;
-                height: 10%;
-                margin: 2rem 0;
+                height: auto;
+                margin: 1rem 0;
                 padding: 3rem;
-                // flex: 1;
                 color: rgba(var(--fall-secondary-rgb), .8);
                 background-color: rgba(var(--dark-rgb), .8);
                 border-radius: 5px;
-                @include respond(1680) {
-                    margin-top: 10rem;
+
+                @include respond(420) {
+                    padding: 1rem;
                 }
 
-                @include respond(1280) {
-                    margin-top: 6rem;
-                }
-
-                @include respond(880) {
-                    margin-top: 4rem;
-                }
-
-                @include respond(375) {
-                    margin-top: 2rem;
-                }
                 // TODO add dark background for visibility
                 &__icon-bar {
                     display: flex;
@@ -74,7 +59,7 @@
                     justify-content: space-evenly;
 
                     @include respond(420) {
-                        font-size: 6.4rem;
+                        font-size: 6rem;
                     }
 
                     @include gradient-animate(90deg,
