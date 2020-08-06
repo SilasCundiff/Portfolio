@@ -1,6 +1,5 @@
 .container {
     &__projects {
-
         &__content-wrapper {
             flex-wrap: wrap;
         }
@@ -12,7 +11,7 @@
             width: 95%;
             margin: 1rem auto;
             padding: 1rem;
-            scrollbar-width: thin;
+            scrollbar-width: none;
             flex: 1;
             overflow: scroll;
             display: grid;

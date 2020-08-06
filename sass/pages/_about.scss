@@ -19,7 +19,8 @@
                 padding: 4rem;
                 width: 100%;
                 font-size: 4rem;
-                background-color: rgba(var(--dark-rgb), .2);
+                color: rgba(var(--near-white-rgb), .8);
+                background-color: rgba(var(--dark-rgb), .8);
                 border-radius: 5px;
 
                 &--em {
@@ -44,10 +45,13 @@
 
             &__skill-set {
                 width: 100%;
-                margin-top: 4rem;
-                flex: 1;
+                height: 10%;
+                margin: 2rem 0;
+                padding: 3rem;
+                // flex: 1;
                 color: rgba(var(--fall-secondary-rgb), .8);
-
+                background-color: rgba(var(--dark-rgb), .8);
+                border-radius: 5px;
                 @include respond(1680) {
                     margin-top: 10rem;
                 }
@@ -63,7 +67,7 @@
                 @include respond(375) {
                     margin-top: 2rem;
                 }
-
+                // TODO add dark background for visibility
                 &__icon-bar {
                     display: flex;
                     font-size: 7.5rem;

@@ -45,7 +45,7 @@
         transition: all .5s;
 
         &--home {
-            color: rgba(var(--spring-secondary-rgb), 1);
+            color: rgba(var(--spring-dark-rgb), 1);
 
             &:hover,
             &:active {
@@ -130,7 +130,7 @@
     .hamburger::after {
         content: '';
         display: block;
-        background-color: rgba(var(--near-white-rgb), .8);
+        background-color: rgba(var(--dark-rgb), .8);
         height: 3px;
         width: 8rem;
         border-radius: 3px;
@@ -148,6 +148,7 @@
 
     .open .hamburger {
         transform: rotate(180deg) rotate(45deg);
+        background-color: rgba(var(--near-white-rgb), .8);
     }
 
     .open .hamburger::before {
@@ -156,5 +157,6 @@
 
     .open .hamburger::after {
         transform: translateY(-3px) rotate(-360deg) rotate(-90deg);
+        background-color: rgba(var(--near-white-rgb), .8);
     }
 }

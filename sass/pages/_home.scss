@@ -14,7 +14,6 @@
                 font-family: var(--font-1);
                 text-align: center;
                 line-height: .8;
-
                 @include respond(1680) {
                     top: 20rem;
                     right: 8rem;
@@ -24,9 +23,14 @@
                     top: 0;
                     right: 0;
                     position: relative;
-                    margin: 10% auto;
+                    margin: 0 auto;
                     width: 80%;
                     font-size: 12rem;
+                    color: rgba(var(--near-white-rgb), .8);
+                    background-color: rgba(var(--dark-rgb), .8);
+                    border-radius: 5px;
+                    padding: 15% 0 0;
+                    
                 }
 
                 @include respond(1024) {
@@ -35,18 +39,16 @@
                 }
 
                 @include respond(768) {
-                    margin: 50% auto;
+                    height: 40%;
                     width: 100%;
-                    font-size: 6rem;
-                }
-
-                @include respond(768) {
                     margin: 50% auto;
-                    width: 100%;
+                    padding: 10% 0 0;
                     font-size: 5.6rem;
                 }
 
                 @include respond(420) {
+                    height: 60%;
+                    margin: 30% auto;
                     line-height: 1;
                     font-size: 5rem;
                 }
@@ -64,7 +66,7 @@
                         rgba(var(--spring-dark-rgb), .8),
                         rgba(var(--spring-secondary-rgb), .8),
                         rgba(var(--spring-light-rgb), .8),
-                        30s
+                        20s
                     );
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
