@@ -7,7 +7,6 @@
     @if $breakpoint == 768 {@media (max-width: 50em) {@content};}
     @if $breakpoint == 600 {@media (max-width: 40em) {@content};}
     @if $breakpoint == 420 {@media (max-width: 37.5em) {@content};}
-    @if $breakpoint == 375 {@media (max-width: 35em) {@content};}
 }
 
 @mixin link-unset {

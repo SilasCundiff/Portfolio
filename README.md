@@ -1,6 +1,6 @@
 # Silas Cundiff's Portfolio Project
 
-** Version 0.1.3 **
+** Version 0.1.4 **
 
 This is an overview of my portfolio project, what I plan to add, and what potential changes I want to make.
 
