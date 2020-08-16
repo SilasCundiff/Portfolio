@@ -84,7 +84,7 @@ let about_bounding = about.getBoundingClientRect();
 let contact = document.getElementById("contact");
 let contact_bounding = contact.getBoundingClientRect();
 
-checkPosition();
+
 
 
 let scrollWrapper = document.getElementById("scroll-wrapper__outter");
@@ -95,6 +95,28 @@ $(scrollWrapper).scroll(function() {
     didScroll = true;
 });
  
+
+function checkPosition() {
+    home_bounding = home.getBoundingClientRect();
+    projects_bounding = projects.getBoundingClientRect();
+    about_bounding = about.getBoundingClientRect();
+    contact_bounding = contact.getBoundingClientRect();
+         if (home_bounding.left <= 0 && home_bounding.left >= -10 && home_bounding.top <= 0 && home_bounding.top >= -10) {
+             console.log("activated!");
+             activatePageStyles('home');
+         }
+         else if (projects_bounding.left <= 0 && projects_bounding.left >= -10 && projects_bounding.top <= 0 && projects_bounding.top >= -10) {
+             activatePageStyles('projects');
+         }
+         else if (about_bounding.left <= 0 && about_bounding.left >= -10 && about_bounding.top <= 0 && about_bounding.top >= -10) {
+             activatePageStyles('about');
+         }
+         else if (contact_bounding.left <= 0 && contact_bounding.left >= -10 && contact_bounding.top <= 0 && contact_bounding.top >= -10) {
+             activatePageStyles('contact');
+         }
+ }
+
+ checkPosition();
 setInterval(function() {
     if ( didScroll ) {
         didScroll = false;
@@ -105,24 +127,7 @@ setInterval(function() {
 
 
 
-function checkPosition () {
-   home_bounding = home.getBoundingClientRect();
-   projects_bounding = projects.getBoundingClientRect();
-   about_bounding = about.getBoundingClientRect();
-   contact_bounding = contact.getBoundingClientRect();
-        if (home_bounding.x === 0 && home_bounding.y === 0) {
-            activatePageStyles('home');
-        }
-        else if (projects_bounding.x === 0 && projects_bounding.y === 0) {
-            activatePageStyles('projects');
-        }
-        else if (about_bounding.x === 0 && about_bounding.y === 0) {
-            activatePageStyles('about');
-        }
-        else if (contact_bounding.x === 0 && contact_bounding.y === 0) {
-            activatePageStyles('contact');
-        }
-}
+
 
 function activatePageStyles(current_page) {
     backgroundUpdater(current_page);

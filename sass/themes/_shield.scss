@@ -9,13 +9,56 @@
         left: 0;
         right: 0;
         z-index: -1;
+
         @include respond(1024) {
-            height: 110%;
+            height: 100%;
+            bottom: -10%;
+            left: 50%;
+            transform: translateX(-50%);
+            right: unset;
         }
-        
+        @include respond(768) {
+            height: 90%;
+            transform: translateX(-40%);
+        }
+    }
 
 
+}
+.tree {
+    stroke: none;
+    fill: black;
+}
 
+.shield {  
+    &--tree {
+        fill: none;
+        stroke: none;
+    }
+    &--back-board
+    {
+        fill: none;
+        stroke: none;
+    }
+    &--clip-path__tree {
+        clip-path: url(#shield__tree-clip-path);
+        fill: none;
+        stroke: none;
+    }
+    &--clip-path__tree-outer {
+        fill: none;
+        stroke: none;
+    }
+    &--clip-path__transparent-overlay {
+        fill: none;
+        stroke: none;
+        stroke-width: 10px;
+        opacity: 0.62;
+    }
+    &--thick-outline {
+        stroke-width: 3px;
+        fill: none;
+        stroke: none;
     }
 
 }

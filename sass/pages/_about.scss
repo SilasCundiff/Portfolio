@@ -4,46 +4,59 @@
     &__about {
         &__content-wrapper {
             font-family: var(--font-3);
-            display: flex;
-            flex-direction: column;
-            justify-items: center;
-            align-items: center;
+            position: relative;
         }
 
         .about {
+            &__bio__outer--container {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                height: 85%;
+                width: 80%;
+
+                @include respond(768) {
+                    height: 90%;
+                    width: 90%;
+                }
+            }
+
             &__bio--container {
-                flex: 1;
-                padding: 3%;
+
+                padding: 2%;
                 width: 100%;
-                height: auto;
-                max-height: 75%;
-                font-size: 3.8rem;
+                height: 85%;
+                font-size: 3.6rem;
                 color: rgba(var(--near-white-rgb), .8);
                 background-color: rgba(var(--dark-rgb), .8);
                 border-radius: 5px;
+                overflow: scroll;
+                scrollbar-width: thin;
 
                 &--em {
                     color: rgba(var(--fall-secondary-rgb), .8);
                 }
 
-                @include respond(1680) {font-size: 3.2rem;}
-                @include respond(1440) {font-size: 3rem;}
+                @include respond(1680) {
+                    font-size: 3.1rem;
+                }
 
                 @include respond(768) {
-                    margin-top: 10%;
                     font-size: 4.8rem;
                 }
+
                 @include respond(420) {
                     font-size: 3.6rem;
-                    overflow: scroll;
+
                 }
             }
 
             &__skill-set {
                 width: 100%;
                 height: auto;
-                margin: 1rem 0;
-                padding: 3rem;
+                margin: .5rem 0;
+                padding: 2rem;
                 color: rgba(var(--fall-secondary-rgb), .8);
                 background-color: rgba(var(--dark-rgb), .8);
                 border-radius: 5px;
