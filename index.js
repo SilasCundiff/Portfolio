@@ -1,10 +1,10 @@
+
 /*************Projects page***************/
 
 // TODO This code is a temp solution.
 // Bug: When the "ALL PROJECTS" filter is active, all elements have the class "disable assigned to them"
 // * When you click off of all projects onto another button, the transition doesn't work because the class is removed immediately
 // Click between on of the filters and any other filter to see example of working transition
-
 // ? Potential solution: implement a toggle so the class is never "removed", just changed to a different class
 
 filterType("all");
@@ -73,10 +73,101 @@ $('.navigation__link').on("click", function () {
 });
 
 
+/**************in viewport testing**************/
 
-// horizontal testing
-// scroll-snap-align: center;
+let home = document.getElementById("home");
+let home_bounding = home.getBoundingClientRect();
+let projects = document.getElementById("projects");
+let projects_bounding = projects.getBoundingClientRect();
+let about = document.getElementById("about");
+let about_bounding = about.getBoundingClientRect();
+let contact = document.getElementById("contact");
+let contact_bounding = contact.getBoundingClientRect();
 
-$( window ).resize(function() {
-    
-  });
+checkPosition();
+
+
+let scrollWrapper = document.getElementById("scroll-wrapper__outter");
+let scrollWrapperInner = document.getElementById("scroll-wrapper__inner");
+
+let didScroll = false;
+$(scrollWrapper).scroll(function() {
+    didScroll = true;
+});
+ 
+setInterval(function() {
+    if ( didScroll ) {
+        didScroll = false;
+    checkPosition();
+    }
+}, 250);
+
+
+
+
+function checkPosition () {
+   home_bounding = home.getBoundingClientRect();
+   projects_bounding = projects.getBoundingClientRect();
+   about_bounding = about.getBoundingClientRect();
+   contact_bounding = contact.getBoundingClientRect();
+        if (home_bounding.x === 0 && home_bounding.y === 0) {
+            activatePageStyles('home');
+        }
+        else if (projects_bounding.x === 0 && projects_bounding.y === 0) {
+            activatePageStyles('projects');
+        }
+        else if (about_bounding.x === 0 && about_bounding.y === 0) {
+            activatePageStyles('about');
+        }
+        else if (contact_bounding.x === 0 && contact_bounding.y === 0) {
+            activatePageStyles('contact');
+        }
+}
+
+function activatePageStyles(current_page) {
+    backgroundUpdater(current_page);
+    addFooterClass(current_page + '__footer');
+}
+
+
+// replace $('.tree').css("fill", "rgba(var(--spring-dark-rgb), .8)"); with function calls
+function backgroundUpdater(current_page) {
+    sanitizeImageClasses();
+    switch (current_page) {
+        case 'home':
+            $('.sakura-image').addClass('show-image');
+            break;
+        case 'projects':
+             $('.apple-image').addClass('show-image');
+            break;
+        case 'about':
+             $('.maple-image').addClass('show-image');
+            break;
+        case 'contact':
+             $('.snow-image').addClass('show-image');
+            break;
+        default:
+             $('.sakura-image').addClass('show-image');
+            break;
+    }
+}
+function sanitizeImageClasses() {
+    $('.sakura-image').removeClass('show-image');
+    $('.apple-image').removeClass('show-image');
+    $('.maple-image').removeClass('show-image');
+    $('.snow-image').removeClass('show-image');
+}
+function sanitizeFooterClasses() {
+    $('footer').removeClass('home__footer');
+    $('footer').removeClass('projects__footer');
+    $('footer').removeClass('about__footer');
+    $('footer').removeClass('contact__footer');
+}
+function addFooterClass(page_pos) {
+    sanitizeFooterClasses();
+    $('footer').addClass(page_pos);
+}
+
+
+
+
