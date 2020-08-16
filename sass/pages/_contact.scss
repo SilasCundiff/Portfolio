@@ -22,24 +22,18 @@
                 top: 15%;
                 right: 5%;
             }
-            @include respond(768) {
-                color: rgba(var(--near-white-rgb), .8);
-                background-color: rgba(var(--dark-rgb), .8);
-                line-height: 1.4;
+            
+            @include respond(1024) {
                 right: 0;
                 left: 0;
-                height: 100%;
-                width: 100%;
-                padding: 2%;
+                top: 50%;
+                transform: translateY(-50%);
+                height: auto;
+                width: auto;
+                padding: 3rem;
+                color: rgba(var(--near-white-rgb), .8);
+                background-color: rgba(var(--dark-rgb), .8);
             }
-           
-                // color: rgba(var(--near-white-rgb), .8);
-                // background-color: rgba(var(--dark-rgb), .8);
-                // border-radius: 5px;
-                // padding: 5% 0 20%;
-            
-
-
 
             &--main {
                 margin-bottom: 4rem;

@@ -3,7 +3,7 @@
 .container {
     &__home {
         &__content-wrapper {
-            
+
             .intro {
                 position: absolute;
                 top: 20%;
@@ -13,31 +13,41 @@
                 font-family: var(--font-1);
                 text-align: center;
                 line-height: .8;
+
                 @include respond(1680) {
                     top: 15%;
                     right: 5%;
                 }
 
-                @include respond(768) {
+                @include respond(1024) {
                     right: 0;
                     left: 0;
-                    // height: 100%;
-                    width: 100%;
-                    height: 60%;
-                    // TODO fix height
+                    top: 50%;
+                    transform: translateY(-50%);
+                    height: auto;
+                    width: auto;
+                    padding: 3rem;
                     color: rgba(var(--near-white-rgb), .8);
                     background-color: rgba(var(--dark-rgb), .8);
-     
+                }
+
+                @include respond(420) {
+                    top: 40%;
                 }
 
 
                 &__main {
                     margin-bottom: 4rem;
                     font-size: 6rem;
+
+                    @include respond(768) {
+                        font-size: 10rem;
+                    }
+
                     @include respond(420) {
-                        font-size: 4.8rem;
+                        font-size: 5.8rem;
                         line-height: 1.2;
-                        
+
                     }
                 }
 
@@ -45,17 +55,20 @@
                     font-size: 8rem;
                     font-weight: 700;
                     color: rgba(var(--spring-secondary-rgb), .8);
-                    @include gradient-animate(
-                        90deg, 
+                    @include gradient-animate(90deg,
                         rgba(var(--spring-dark-rgb), .8),
                         rgba(var(--spring-secondary-rgb), .8),
                         rgba(var(--spring-light-rgb), .8),
-                        20s
-                    );
+                        20s);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
+
+                    @include respond(768) {
+                        font-size: 14rem;
+                    }
+
                     @include respond(420) {
-                        font-size: 6rem;
+                        font-size: 7rem;
                     }
                 }
 
@@ -63,20 +76,27 @@
 
                     font-size: 5rem;
                     line-height: 1.2;
+
+                    @include respond(768) {
+                        font-size: 8rem;
+                    }
+
                     @include respond(420) {
                         line-height: 1.8;
-                        font-size: 3.8rem;
+                        font-size: 4.6rem;
                         padding: 6rem 1rem;
                     }
                 }
+
                 &__cta-wrapper {
-                        margin-top: 4rem;
-                        @include respond(1280) {
-                            margin-top: 2rem;
+                    margin-top: 4rem;
+
+                    @include respond(1280) {
+                        margin-top: 2rem;
+                    }
+
                 }
-                
             }
         }
     }
-} 
 }
