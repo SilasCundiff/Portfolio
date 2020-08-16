@@ -9,6 +9,7 @@
     background-color: none;
     color: rgba(var(--off-white-rgb), .7);
     font-family: 'ode', serif;
+    opacity: 0;
     @include respond(1680) {
         font-size: 2.6rem;
     }
@@ -21,4 +22,24 @@
     }
 
     
+}
+.fade {
+    transition: all .4s;
+}
+.home__footer {
+    opacity: 1;
+    color: rgba(var(--spring-secondary-rgb), .8);
+}
+.projects__footer {
+    opacity: 1;
+    color: rgba(var(--summer-secondary-rgb), .8);
+
+}
+.about__footer {
+    opacity: 1;
+    color: rgba(var(--fall-secondary-rgb), .8);
+}
+.contact__footer {
+    opacity: 1;
+    color: rgba(var(--winter-secondary-rgb), .8);
 }

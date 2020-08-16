@@ -24,10 +24,17 @@
 
 .scroll-wrapper__inner {
     display: grid;
-    grid-template-columns: repeat(4, 2560px);
+    //TODO implement media queries for larger screen grids
+    grid-template-columns: repeat(4, 1920px);
     gap: 0;
     transform: rotate(90deg) translateY(-100vh);
     transform-origin: top left;
+    @include respond(2000) {
+        grid-template-columns: repeat(4, 2560px);
+    }
+    @include respond(2560) {
+        grid-template-columns: repeat(4, 3560px);
+    }
 
     // un-rotate for smaller screens
     @include respond(1024) {

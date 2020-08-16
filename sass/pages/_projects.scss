@@ -143,7 +143,6 @@
                     color: rgba(var(--dark-rgb), .8);
                     box-shadow: 12px 6px 10px rgba(var(--dark-rgb), .8);
                     transform: rotateY(180deg);
-                    
                     border-radius: 5px;
                     @include respond(1024) {
                         grid-column: 1/3;

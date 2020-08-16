@@ -1,4 +1,6 @@
 @mixin respond($breakpoint) {
+    @if $breakpoint == 2560 {@media (min-width: 160.1em) {@content};}
+    @if $breakpoint == 2000 {@media (min-width: 125em) {@content};}
     @if $breakpoint == 1680 {@media (max-width: 105em) {@content};}
     @if $breakpoint == 1440 {@media (max-width: 90em) {@content};}
     @if $breakpoint == 1280 {@media (max-width: 80em) {@content};}
